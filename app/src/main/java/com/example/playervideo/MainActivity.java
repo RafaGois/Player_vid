@@ -12,6 +12,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        View decorview = getWindow().getDecorView();
+
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+
+        decorview.setSystemUiVisibility(uiOptions);
+
+        getSupportActionBar().hide();
     }
 
     public void abrirVideo (View view) {
